@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  targetNamespace="http://mws.amazonservices.com/schema/Products/2011-10-01"
+  elementFormDefault="qualified"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:tns="http://mws.amazonservices.com/schema/Products/2011-10-01"
+  version="1.3">
+
+  <element name="Products" type="tns:ProductList" />
+  <complexType name="ProductList">
+    <sequence>
+      <element name="Product" type="tns:ProductType" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+
+  <element name="Product" type="tns:ProductType" />
+  <complexType name="ProductType">
+    <sequence>
+      <element ref="tns:Identifiers" />
+      <element name="AttributeSets" type="tns:AttributeSetList" minOccurs="0" />
+      <element name="Relationships" type="tns:RelationshipList" minOccurs="0" />
+      <element name="CompetitivePricing" type="tns:CompetitivePricingType" minOccurs="0" />
+      <element name="SalesRankings" type="tns:SalesRankList" minOccurs="0" />
+      <element name="LowestOfferListings" type="tns:LowestOfferListingList" minOccurs="0" />
+      <element name="Offers" type="tns:OffersList" minOccurs="0" />
+    </sequence>
+  </complexType>
+
+  <complexType name="RelationshipList">
+    <sequence>
+      <element ref="tns:BaseRelationship" minOccurs="0" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+
+  <complexType name="AttributeSetList">
+    <sequence>
+      <element ref="tns:AttributeSet" minOccurs="0" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+
+  <element name="VariationParent"
+           type="tns:VariationParentType"
+           substitutionGroup="tns:BaseRelationship" />
+
+  <complexType name="VariationParentType">
+    <complexContent>
+      <extension base="tns:BaseRelationshipType" />
+    </complexContent>
+  </complexType>
+
+  <element name="AttributeSet" abstract="true" type="tns:AttributeSetType" />
+
+  <complexType name="AttributeSetType">
+    <sequence>
+      <element name="nil" minOccurs="0" />
+    </sequence>
+  </complexType>
+
+  <element name="Identifiers" type="tns:IdentifierType" />
+
+  <complexType name="IdentifierType">
+    <sequence>
+      <element name="MarketplaceASIN" type="tns:MarketplaceASINType" />
+      <element name="SKUIdentifier" type="tns:SellerSKUIdentifier" minOccurs="0" />
+    </sequence>
+  </complexType>
+
+  <complexType name="MarketplaceASINType">
+    <sequence>
+      <element name="MarketplaceId" type="tns:MarketplaceIdType" />
+      <element name="ASIN" type="string" />
+    </sequence>
+  </complexType>
+
+  <complexType name="SellerSKUIdentifier">
+    <sequence>
+      <element name="MarketplaceId" type="string" />
+      <element name="SellerId" type="string" />
+      <element name="SellerSKU" type="string" />
+    </sequence>
+  </complexType>
+
+  <simpleType name="MarketplaceIdType">
+    <restriction base="string">
+      <pattern value="[A-Z0-9]+" />
+    </restriction>
+  </simpleType>
+
+  <element name="BaseRelationship"
+           abstract="true"
+           type="tns:BaseRelationshipType" />
+
+  <!-- base variation attributes type. Each variation substition will extend this element -->
+  <complexType name="BaseRelationshipType">
+    <sequence>
+      <element ref="tns:Identifiers" />
+    </sequence>
+  </complexType>
+
+  <complexType name="CompetitivePricingType">
+    <sequence>
+      <element name="CompetitivePrices" type="tns:CompetitivePriceList" />
+      <element name="NumberOfOfferListings" type="tns:NumberOfOfferListingsType" minOccurs="0" />
+      <element name="TradeInValue" type="tns:MoneyType" minOccurs="0" />
+    </sequence>
+  </complexType>
+
+  <complexType name="CompetitivePriceList">
+    <sequence>
+      <element name="CompetitivePrice" type="tns:CompetitivePriceType" minOccurs="0" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+
+  <complexType name="CompetitivePriceType">
+    <sequence>
+      <element name="CompetitivePriceId" type="string" />
+      <element name="Price" type="tns:PriceType" />
+    </sequence>
+    <attribute name="condition" type="string" use="required" />
+    <attribute name="subcondition" type="string" use="required" />
+    <attribute name="belongsToRequester" type="boolean" use="required" />
+  </complexType>
+
+  <complexType name="OffersList">
+    <sequence>
+      <element name="Offer" type="tns:OfferType" minOccurs="0" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+
+  <complexType name="OfferType">
+    <sequence>
+      <element name="BuyingPrice" type="tns:PriceType" />
+      <element name="RegularPrice" type="tns:MoneyType" />
+      <element name="FulfillmentChannel" type="string" />
+      <element name="ItemCondition" type="string" />
+      <element name="ItemSubCondition" type="string" />
+      <element name="SellerId" type="string" />
+      <element name="SellerSKU" type="string" />
+    </sequence>
+  </complexType>
+
+  <complexType name="PriceType">
+    <sequence>
+      <element name="LandedPrice" type="tns:MoneyType" minOccurs="0" />
+      <element name="ListingPrice" type="tns:MoneyType" />
+      <element name="Shipping" type="tns:MoneyType" minOccurs="0" />
+    </sequence>
+  </complexType>
+
+  <complexType name="MoneyType">
+    <sequence>
+      <element name="CurrencyCode" type="string" minOccurs="0" />
+      <element name="Amount" type="decimal" minOccurs="0" />
+    </sequence>
+  </complexType>
+
+  <complexType name="NumberOfOfferListingsType">
+    <sequence>
+      <element name="OfferListingCount" type="tns:OfferListingCountType" minOccurs="0" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+
+  <complexType name="OfferListingCountType">
+    <simpleContent>
+      <extension base="integer">
+        <attribute name="condition" type="string" />
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="SalesRankList">
+    <sequence>
+      <element name="SalesRank" type="tns:SalesRankType" minOccurs="0" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+
+  <complexType name="SalesRankType">
+    <sequence>
+      <element name="ProductCategoryId" type="string" />
+      <element name="Rank" type="integer" />
+    </sequence>
+  </complexType>
+
+  <complexType name="LowestOfferListingList">
+    <sequence>
+      <element name="LowestOfferListing" type="tns:LowestOfferListingType" minOccurs="0" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+
+  <complexType name="LowestOfferListingType">
+    <sequence>
+      <element name="Qualifiers" type="tns:QualifiersType" />
+      <element name="NumberOfOfferListingsConsidered" type="integer" minOccurs="0" />
+      <element name="SellerFeedbackCount" type="integer" />
+      <element name="Price" type="tns:PriceType" />
+      <element name="MultipleOffersAtLowestPrice" type="string" />
+    </sequence>
+  </complexType>
+
+  <complexType name="QualifiersType">
+    <sequence>
+      <element name="ItemCondition" type="string" />
+      <element name="ItemSubcondition" type="string" />
+      <element name="FulfillmentChannel" type="string" />
+      <element name="ShipsDomestically" type="string" />
+      <element name="ShippingTime" type="tns:ShippingTimeType" />
+      <element name="SellerPositiveFeedbackRating" type="string" />
+    </sequence>
+  </complexType>
+
+  <complexType name="ShippingTimeType">
+    <sequence>
+      <element name="Max" type="string" minOccurs="0" />
+    </sequence>
+  </complexType>
+</schema>

@@ -1,0 +1,52 @@
+﻿<GetMatchingProductResponse xmlns="http://mws.amazonservices.com/schema/Products/2011-10-01">
+  <GetMatchingProductResult ASIN="B00CHH32P4" status="Success">
+    <Product>
+      <Identifiers>
+        <MarketplaceASIN>
+          <MarketplaceId>A1VC38T7YXB528</MarketplaceId>
+          <ASIN>B00CHH32P4</ASIN>
+        </MarketplaceASIN>
+      </Identifiers>
+      <AttributeSets>
+        <ns2:ItemAttributes xml:lang="ja-JP" xmlns:ns2="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+          <ns2:Brand>ノーブランド品</ns2:Brand>
+          <ns2:Feature>５インチモニター・ナビ用日よけです。</ns2:Feature>
+          <ns2:Feature>光が反射して見えにくいナビやモニターに簡単取り付けで快適ドライブ</ns2:Feature>
+          <ns2:Label>ノーブランド品</ns2:Label>
+          <ns2:Manufacturer>ノーブランド品</ns2:Manufacturer>
+          <ns2:PackageDimensions>
+            <ns2:Height Units="inches">1.57</ns2:Height>
+            <ns2:Length Units="inches">5.59</ns2:Length>
+            <ns2:Width Units="inches">3.86</ns2:Width>
+            <ns2:Weight Units="pounds">0.13</ns2:Weight>
+          </ns2:PackageDimensions>
+          <ns2:PackageQuantity>1</ns2:PackageQuantity>
+          <ns2:ProductGroup>Automotive Parts and Accessories</ns2:ProductGroup>
+          <ns2:ProductTypeName>AUTO_ACCESSORY</ns2:ProductTypeName>
+          <ns2:Publisher>ノーブランド品</ns2:Publisher>
+          <ns2:SmallImage>
+            <ns2:URL>http://ecx.images-amazon.com/images/I/41zO%2BoB5YAL._SL75_.jpg</ns2:URL>
+            <ns2:Height Units="pixels">53</ns2:Height>
+            <ns2:Width Units="pixels">75</ns2:Width>
+          </ns2:SmallImage>
+          <ns2:Studio>ノーブランド品</ns2:Studio>
+          <ns2:Title>【ノーブランド品】５インチ ナビ 車載モニター用 日よけ サンバイザー ワンタッチ取付</ns2:Title>
+        </ns2:ItemAttributes>
+      </AttributeSets>
+      <Relationships />
+      <SalesRankings>
+        <SalesRank>
+          <ProductCategoryId>automotive_display_on_website</ProductCategoryId>
+          <Rank>380</Rank>
+        </SalesRank>
+        <SalesRank>
+          <ProductCategoryId>2111192051</ProductCategoryId>
+          <Rank>7</Rank>
+        </SalesRank>
+      </SalesRankings>
+    </Product>
+  </GetMatchingProductResult>
+  <ResponseMetadata>
+    <RequestId>2cc711e0-5e03-4226-b315-a1443399c5df</RequestId>
+  </ResponseMetadata>
+</GetMatchingProductResponse>

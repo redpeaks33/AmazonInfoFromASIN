@@ -1,0 +1,12 @@
+C:\Users\redpeak3\Documents\Visual Studio 2013\Projects\ProductInfoFromASIN\ProductInfoFromASIN\bin\Debug\ProductInfoFromASIN.exe.config
+C:\Users\redpeak3\Documents\Visual Studio 2013\Projects\ProductInfoFromASIN\ProductInfoFromASIN\bin\Debug\ProductInfoFromASIN.exe
+C:\Users\redpeak3\Documents\Visual Studio 2013\Projects\ProductInfoFromASIN\ProductInfoFromASIN\bin\Debug\ProductInfoFromASIN.pdb
+C:\Users\redpeak3\Documents\Visual Studio 2013\Projects\ProductInfoFromASIN\ProductInfoFromASIN\bin\Debug\MWSClientCsRuntime-1.0.dll
+C:\Users\redpeak3\Documents\Visual Studio 2013\Projects\ProductInfoFromASIN\ProductInfoFromASIN\bin\Debug\MWSProducts_2011-10-01_v2015-02-13.dll
+C:\Users\redpeak3\Documents\Visual Studio 2013\Projects\ProductInfoFromASIN\ProductInfoFromASIN\obj\Debug\ProductInfoFromASIN.csproj.ResolveComReference.cache
+C:\Users\redpeak3\Documents\Visual Studio 2013\Projects\ProductInfoFromASIN\ProductInfoFromASIN\obj\Debug\ProductInfoFromASIN.IDInputForm.resources
+C:\Users\redpeak3\Documents\Visual Studio 2013\Projects\ProductInfoFromASIN\ProductInfoFromASIN\obj\Debug\ProductInfoFromASIN.MainForm.resources
+C:\Users\redpeak3\Documents\Visual Studio 2013\Projects\ProductInfoFromASIN\ProductInfoFromASIN\obj\Debug\ProductInfoFromASIN.Properties.Resources.resources
+C:\Users\redpeak3\Documents\Visual Studio 2013\Projects\ProductInfoFromASIN\ProductInfoFromASIN\obj\Debug\ProductInfoFromASIN.csproj.GenerateResource.Cache
+C:\Users\redpeak3\Documents\Visual Studio 2013\Projects\ProductInfoFromASIN\ProductInfoFromASIN\obj\Debug\ProductInfoFromASIN.exe
+C:\Users\redpeak3\Documents\Visual Studio 2013\Projects\ProductInfoFromASIN\ProductInfoFromASIN\obj\Debug\ProductInfoFromASIN.pdb

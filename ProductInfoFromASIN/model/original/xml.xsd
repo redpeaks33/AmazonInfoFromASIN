@@ -1,0 +1,28 @@
+<schema xmlns="http://www.w3.org/1999/XMLSchema" targetNamespace="http://www.w3.org/XML/1998/namespace">
+  <annotation>
+    <documentation>
+      !!!THIS SCHEMA DOCUMENT IS OUT OF DATE!!! It uses a preliminary W3C XML Schema syntax which has been superseded. The up-to-date version is at http://www.w3.org/2001/xml.xsd
+    </documentation>
+  </annotation>
+  <annotation>
+    <documentation>
+    </documentation>
+  </annotation>
+  <attributeGroup name="lang">
+    <attribute name="lang" type="language">
+      <annotation>
+        <documentation>
+          In due course, we should install the relevant ISO 2- and 3-letter codes as the enumerated possible values . . .
+        </documentation>
+      </annotation>
+    </attribute>
+  </attributeGroup>
+  <attributeGroup name="space">
+    <attribute name="space" default="preserve">
+      <simpleType base="NCName">
+        <enumeration value="default"/>
+        <enumeration value="preserve"/>
+      </simpleType>
+    </attribute>
+  </attributeGroup>
+</schema>

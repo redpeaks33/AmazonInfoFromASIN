@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<schema
+  targetNamespace="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd"
+  elementFormDefault="qualified"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:product="http://mws.amazonservices.com/schema/Products/2011-10-01"
+  xmlns:tns="http://mws.amazonservices.com/schema/Products/2011-10-01/default.xsd">
+
+  
+
+  <import schemaLocation="Product.xsd"
+          namespace="http://mws.amazonservices.com/schema/Products/2011-10-01" />
+
+  <element name="ItemAttributes"
+           type="tns:ItemAttributesType"
+           substitutionGroup="product:AttributeSet" />
+
+  <complexType name="ItemAttributesType">
+    <complexContent>
+      <extension base="product:AttributeSetType">
+        <sequence>
+          <element name="Actor" type="string" minOccurs="0" maxOccurs="unbounded" />
+          <element name="Artist" type="string" minOccurs="0" maxOccurs="unbounded" />
+          <element name="AspectRatio" type="string" minOccurs="0" />
+          <element name="AudienceRating" type="string" minOccurs="0" />
+          <element name="Author" type="string" minOccurs="0" maxOccurs="unbounded" />
+          <element name="BackFinding" type="string" minOccurs="0" />
+          <element name="BandMaterialType" type="string" minOccurs="0" />
+          <element name="Binding" type="string" minOccurs="0" />
+          <element name="Brand" type="string" minOccurs="0" />
+          <element name="CEROAgeRating" type="string" minOccurs="0" />
+          <element name="ChainType" type="string" minOccurs="0" />
+          <element name="ClaspType" type="string" minOccurs="0" />
+          <element name="Color" type="string" minOccurs="0" />
+          <element name="Creator" type="tns:CreatorType" minOccurs="0" maxOccurs="unbounded" />
+          <element name="Department" type="string" minOccurs="0" />
+          <element name="Director" type="string" minOccurs="0" maxOccurs="unbounded" />
+          <element name="DisplaySize" type="tns:DecimalWithUnits" minOccurs="0" />
+          <element name="Edition" type="string" minOccurs="0" />
+          <element name="EpisodeSequence" type="string" minOccurs="0" />
+          <element name="ESRBAgeRating" type="string" minOccurs="0" />
+          <element name="Feature" type="string" minOccurs="0" maxOccurs="unbounded" />
+          <element name="Format" type="string" minOccurs="0" maxOccurs="unbounded" />
+          <element name="GemType" type="string" minOccurs="0" maxOccurs="unbounded" />
+          <element name="Genre" type="string" minOccurs="0" />
+          <element name="GolfClubFlex" type="string" minOccurs="0" />
+          <element name="GolfClubLoft" type="tns:DecimalWithUnits" minOccurs="0" />
+          <element name="HardwarePlatform" type="string" minOccurs="0" />
+          <element name="HazardousMaterialType" type="string" minOccurs="0" />
+          <element name="ItemDimensions" type="tns:DimensionType" minOccurs="0" />
+          <element name="IsAdultProduct" type="boolean" minOccurs="0" />
+          <element name="IsAutographed" type="boolean" minOccurs="0" />
+          <element name="IsEligibleForTradeIn" type="boolean" minOccurs="0" />
+          <element name="IsMemorabilia" type="boolean" minOccurs="0" />
+          <element name="IssuesPerYear" type="string" minOccurs="0" />
+          <element name="ItemPartNumber" type="string" minOccurs="0" />
+          <element name="Label" type="string" minOccurs="0" />
+          <element name="Languages" type="tns:LanguageType" minOccurs="0" />
+          <element name="LegalDisclaimer" type="string" minOccurs="0" />
+          <element name="ListPrice" type="tns:Price" minOccurs="0" />
+          <element name="Manufacturer" type="string" minOccurs="0" />
+          <element name="ManufacturerMaximumAge" type="tns:DecimalWithUnits" minOccurs="0" />
+          <element name="ManufacturerMinimumAge" type="tns:DecimalWithUnits" minOccurs="0" />
+          <element name="ManufacturerPartsWarrantyDescription" type="string" minOccurs="0" />
+          <element name="MaterialType" type="string" minOccurs="0" maxOccurs="unbounded" />
+          <element name="MediaType" type="string" minOccurs="0" maxOccurs="unbounded" />
+          <element name="MetalStamp" type="string" minOccurs="0" />
+          <element name="MetalType" type="string" minOccurs="0" />
+          <element name="Model" type="string" minOccurs="0" />
+          <element name="NumberOfDiscs" type="nonNegativeInteger" minOccurs="0" />
+          <element name="NumberOfIssues" type="nonNegativeInteger" minOccurs="0" />
+          <element name="NumberOfItems" type="nonNegativeInteger" minOccurs="0" />
+          <element name="NumberOfPages" type="nonNegativeInteger" minOccurs="0" />
+          <element name="NumberOfTracks" type="nonNegativeInteger" minOccurs="0" />
+          <element name="OperatingSystem" type="string" minOccurs="0" maxOccurs="unbounded" />
+          <element name="PackageDimensions" type="tns:DimensionType" minOccurs="0" maxOccurs="1" />
+          <element name="PackageQuantity" type="nonNegativeInteger" minOccurs="0" />
+          <element name="PartNumber" type="string" minOccurs="0" />
+          <element name="Platform" type="string" minOccurs="0" maxOccurs="unbounded" />
+          <element name="ProductGroup" type="string" minOccurs="0" />
+          <element name="ProductTypeName" type="string" minOccurs="0" />
+          <element name="ProductTypeSubcategory" type="string" minOccurs="0" />
+          <element name="PublicationDate" type="string" minOccurs="0" />
+          <element name="Publisher" type="string" minOccurs="0" />
+          <element name="RegionCode" type="string" minOccurs="0" />
+          <element name="ReleaseDate" type="string" minOccurs="0" />
+          <element name="RunningTime" type="tns:DecimalWithUnits" minOccurs="0" />
+          <element name="SeasonSequence" type="string" minOccurs="0" />
+          <element name="SeikodoProductCode" type="string" minOccurs="0" />
+          <element name="Size" type="string" minOccurs="0" />
+          <element name="SizePerPearl" type="string" minOccurs="0" />
+          <element name="SmallImage" type="tns:Image" minOccurs="0" />
+          <element name="Studio" type="string" minOccurs="0" />
+          <element name="SubscriptionLength" type="tns:NonNegativeIntegerWithUnits" minOccurs="0" />
+          <element name="Title" type="string" minOccurs="0" />
+          <element name="TotalDiamondWeight" type="tns:DecimalWithUnits" minOccurs="0" />
+          <element name="TotalGemWeight" type="tns:DecimalWithUnits" minOccurs="0" />
+          <element name="Warranty" type="string" minOccurs="0" />
+          <element name="WEEETaxValue" type="tns:Price" minOccurs="0" />
+        </sequence>
+        
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <complexType name="NonNegativeIntegerWithUnits">
+    <simpleContent>
+      <extension base="nonNegativeInteger">
+        <attribute name="Units" type="string" use="required" />
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="DecimalWithUnits">
+    <simpleContent>
+      <extension base="decimal">
+        <attribute name="Units" type="string" use="required" />
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="Price">
+    <sequence>
+      <element name="Amount" type="decimal" minOccurs="0" />
+      <element name="CurrencyCode" type="string" minOccurs="0" />
+    </sequence>
+  </complexType>
+
+  <complexType name="LanguageType">
+    <sequence>
+      <element name="Language" minOccurs="0" maxOccurs="unbounded">
+        <complexType>
+          <sequence>
+            <element name="Name" type="string" />
+            <element name="Type" type="string" minOccurs="0" />
+            <element name="AudioFormat" type="string" minOccurs="0" />
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+
+  <complexType name="Image">
+    <sequence>
+      <element name="URL" type="string" />
+      <element name="Height" type="tns:DecimalWithUnits" />
+      <element name="Width" type="tns:DecimalWithUnits" />
+    </sequence>
+  </complexType>
+
+  <complexType name="CreatorType">
+    <simpleContent>
+      <extension base="string">
+        <attribute name="Role" type="string" use="required" />
+      </extension>
+    </simpleContent>
+  </complexType>
+
+  <complexType name="DimensionType">
+    <sequence>
+      <element name="Height" type="tns:DecimalWithUnits" minOccurs="0" />
+      <element name="Length" type="tns:DecimalWithUnits" minOccurs="0" />
+      <element name="Width" type="tns:DecimalWithUnits" minOccurs="0" />
+      <element name="Weight" type="tns:DecimalWithUnits" minOccurs="0" />
+    </sequence>
+  </complexType>
+
+  <element name="VariationChild"
+           type="tns:VariationChildType"
+           substitutionGroup="product:BaseRelationship" />
+
+  <complexType name="VariationChildType">
+    <complexContent>
+      <extension base="product:BaseRelationshipType">
+        <sequence>
+          <element name="Color" type="string" minOccurs="0" />
+          <element name="Edition" type="string" minOccurs="0" />
+          <element name="GemType" type="string" minOccurs="0" maxOccurs="unbounded" />
+          <element name="GolfClubFlex" type="string" minOccurs="0" />
+          <element name="GolfClubLoft" type="tns:DecimalWithUnits" minOccurs="0" />
+          <element name="HardwarePlatform" type="string" minOccurs="0" />
+          <element name="ItemDimensions" type="tns:DimensionType" minOccurs="0" />
+          <element name="MaterialType" type="string" minOccurs="0" maxOccurs="unbounded" />
+          <element name="MetalType" type="string" minOccurs="0" />
+          <element name="Model" type="string" minOccurs="0" />
+          <element name="OperatingSystem" type="string" minOccurs="0" maxOccurs="unbounded" />
+          <element name="PackageQuantity" type="nonNegativeInteger" minOccurs="0" />
+          <element name="ProductTypeSubcategory" type="string" minOccurs="0" />
+          <element name="Size" type="string" minOccurs="0" />
+          <element name="SizePerPearl" type="string" minOccurs="0" />
+          <element name="TotalDiamondWeight" type="tns:DecimalWithUnits" minOccurs="0" />
+          <element name="TotalGemWeight" type="tns:DecimalWithUnits" minOccurs="0" />
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+</schema>
